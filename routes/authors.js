@@ -1,5 +1,4 @@
 const express = require('express')
-const author = require('../models/author')
 const router = express.Router()
 const Author = require('../models/author')
 
@@ -23,7 +22,7 @@ router.get('/', async (req, res) => {
 // New Author Route
 router.get('/new', async (req, res) => {
     res.render('authors/new', {
-        author: new author()
+        author: new Author()
     })
 })
 
